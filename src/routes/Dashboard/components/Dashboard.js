@@ -7,8 +7,6 @@ class DashboardRoute extends React.Component {
     dashboardVisitIncrement: PropTypes.func.isRequired,
     //add function from DashboardContainer
     fetchDashboardDataAsync: PropTypes.func.isRequired,
-    //add functio from DashboardContainer
-    //dashboardAddItemAsync: PropTypes.func.isRequired,
     dashboardAddItem: PropTypes.func.isRequired,
     dashboardEditItem: PropTypes.func.isRequired,
     dashboardReorderItems: PropTypes.func.isRequired,

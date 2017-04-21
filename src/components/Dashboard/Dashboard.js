@@ -22,7 +22,7 @@ export class Dashboard extends React.Component {
     ev.preventDefault()
     ev.dataTransfer.dropEffect = 'move'  // See the section on the DataTransfer object.
     // You can add here more logic if required
-  }  
+  }
 
   handleOnDrop = ev => {
     const droppedItemId = ev.currentTarget.id
