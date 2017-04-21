@@ -5,6 +5,10 @@ class DashboardRoute extends React.Component {
 
   static propTypes = {
     dashboardVisitIncrement: PropTypes.func.isRequired,
+    //add function from DashboardContainer
+    fetchDashboardDataAsync: PropTypes.func.isRequired,
+    //add functio from DashboardContainer
+    //dashboardAddItemAsync: PropTypes.func.isRequired,
     dashboardAddItem: PropTypes.func.isRequired,
     dashboardEditItem: PropTypes.func.isRequired,
     dashboardReorderItems: PropTypes.func.isRequired,
@@ -14,6 +18,13 @@ class DashboardRoute extends React.Component {
 
   componentDidMount () {
     this.props.dashboardVisitIncrement()
+    //use function from dashboardContainer
+    this.props.fetchDashboardDataAsync()
+  }
+
+  componentWillMount() {
+    //use function from dashboardContainer
+    this.props.fetchDashboardDataAsync()
   }
 
   updateItem = ({ editItemIndex, label }) => (
@@ -35,9 +46,9 @@ class DashboardRoute extends React.Component {
   }
 
   render () {
-    if (!this.props.session.isLoggedIn) {
+    /*if (!this.props.session.isLoggedIn) {
       return <h4>Please login in order to access your dashboard</h4>
-    }
+    } comment from DashboardContainer.js*/
     const { dashboard } = this.props
     return (
       <Dashboard

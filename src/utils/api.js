@@ -4,7 +4,7 @@ export const loginRequest = async (login, password) => {
       resolve()
     }, 200)
   }).then(() => {
-    if (login === 'przeor' && password === 'mwp.io') {
+    if (login === 'adams' && password === 'adams') {
       return 'www.mwp.io' // just a mocked token
     } else {
       return 'invalid' // mocked non successful login

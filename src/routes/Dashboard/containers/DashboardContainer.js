@@ -1,9 +1,11 @@
 import { connect } from 'react-redux'
 import {
   dashboardAddItem,
+  //dashboardAddItemAsync,
   dashboardEditItem,
   dashboardVisitIncrement,
-  dashboardReorderItems
+  dashboardReorderItems,
+  fetchDashboardDataAsync
 } from '../modules/dashboard'
 
 /*  This is a container component. Notice it does not contain any JSX,
@@ -19,15 +21,17 @@ import DashboardRoute from '../components/Dashboard'
 
 const mapDispatchToProps = {
   dashboardVisitIncrement : () => dashboardVisitIncrement(1),
-  dashboardAddItem,
+  //dashboardAddItemAsync: (value) => dashboardAddItemAsync(value),
   dashboardEditItem,
-  dashboardReorderItems
+  dashboardReorderItems,
+  fetchDashboardDataAsync: () => fetchDashboardDataAsync(),
 }
 
 const mapStateToProps = (state) => ({
   dashboard : state.dashboard,
   session: state.session
 })
+
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:
 
